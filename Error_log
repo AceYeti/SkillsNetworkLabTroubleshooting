@@ -1,0 +1,29 @@
+ERROR LOG
+
+---------------------------------------------------------------------------
+
+theia@theiadocker-fernanddelas:/home/project$ cd '/home/project' && env '/usr/bin/python3' '/home/theia/plugins/vscode-python/extension/pythonFiles/lib/python/debugpy/launcher' '37023' '--' '/home/project/Peer_graded_assignment.py'
+Dash is running on http://127.0.0.1:8050/
+
+ * Serving Flask app 'Peer_graded_assignment' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:8050/ (Press CTRL+C to quit)
+[2023-01-14 11:27:46,982] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/theia/.local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/theia/.local/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/theia/.local/lib/python3.6/site-packages/flask/app.py", line 1514, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/theia/.local/lib/python3.6/site-packages/flask/app.py", line 1857, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/home/theia/.local/lib/python3.6/site-packages/dash/dash.py", line 1307, in _setup_server
+    _validate.validate_layout(self.layout, self._layout_value())
+  File "/home/theia/.local/lib/python3.6/site-packages/dash/_validate.py", line 411, in validate_layout
+    """
+dash.exceptions.DuplicateIdError: Duplicate component id found in the initial layout: `plot3`
+127.0.0.1 - - [14/Jan/2023 11:27:46] "GET / HTTP/1.1" 500 -
